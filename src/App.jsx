@@ -11,14 +11,10 @@ export function App() {
     setCurrencyConversion(resp.data)
   }, [])
 
-  useEffect(() => {
-    console.log(currency)
-  }, [currency])
-
   let optionItems = Object.entries(currency.rates).map(
     ([currencyCode, currencyDetails]) => {
       return (
-        <option>
+        <option key={currencyCode}>
           {' '}
           {currencyCode}:{(currencyDetails * amount).toFixed(2)}
         </option>
@@ -30,7 +26,6 @@ export function App() {
     <div>
       <h1>Unit Conversion</h1>
       <h2>
-        {' '}
         USD:
         <input
           type="number"

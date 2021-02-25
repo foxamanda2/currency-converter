@@ -2,6 +2,10 @@
   font: 16px / 1 sans-serif;
 }
 
+* {
+  text-align: center;
+}
+
 html {
   height: 100%;
 }
@@ -9,4 +13,18 @@ html {
 body {
   margin: 0;
   min-height: 100%;
+  background-color: lightgrey;
+}
+
+li {
+  list-style: none;
+}
+input {
+  background-color: wheat;
+  font-size: 20px;
+}
+
+select {
+  background-color: wheat;
+  font-size: 20px;
 }

@@ -6,8 +6,12 @@ export function App() {
 
   const [amount, setAmount] = useState(0)
 
+  // let userOptions = Object.entries(currency.rates).map(([currencyCode]) => {
+  //   return <option key={currencyCode}> {currencyCode}</option>
+  // })
+
   useEffect(async () => {
-    const resp = await axios.get('https://api.ratesapi.io/api/latest?base=USD')
+    const resp = await axios.get(`https://api.ratesapi.io/api/latest?base=USD`)
     setCurrencyConversion(resp.data)
   }, [])
 
@@ -25,6 +29,7 @@ export function App() {
   return (
     <div>
       <h1>Unit Conversion</h1>
+      {/* <select>{userOptions}</select> */}
       <h2>
         USD:
         <input
